@@ -1,9 +1,23 @@
-public class koneksi {
+package mvc.koneksi;
+import com.mysql.cj.jdbc.MysqlDataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here
+public class koneksi {
+    static Connection con;
+    
+    public static Connection connection() {
+        if(con==null){
+            MysqlDataSource data = new MysqlDataSource();
+            data.setDatabaseName("db_dutacoding");
+            data.setUser("root");
+            data.setPassword("");
+            try{
+                con = data.getConnection();
+            } catch (SQLException ex){
+                System.out.println();
+            }
+        }
+        return con;
     }
 }
