@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import mvc.DAOInterface.IAdmin;
+import mvc.DAOInterface.Iadmin;
 
-public class DAOAdmin implements IAdmin{
+public class DAOAdmin implements Iadmin{
     Connection connection;
     final String insert = "INSERT INTO tbl_pendaftaran (nik, nama, jk, alamat, usia, alasan) VALUES (?, ?, ?, ?, ?, ?);";
     final String update = "UPDATE tbl_pendaftaran set nik=?, nama=?, jk=?, alamat=?, usia=?, alasan=? WHERE id=?;";
