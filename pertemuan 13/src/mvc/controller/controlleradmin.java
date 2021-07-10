@@ -1,19 +1,19 @@
 package mvc.controller;
 
 import mvc.DAO.DAOAdmin;
-import mvc.Model.Admin;
-import mvc.Model.TabelModelAdmin;
-import mvc.View.FormAdmin;
+import mvc.model.admin;
+import mvc.model.tabelmodeladmin;
+import mvc.view.formadmin;
 import java.util.List;
 import javax.swing.JOptionPane;
-import mvc.DAOInterface.IAdmin;
+import mvc.DAOInterface.Iadmin;
 
 public class controlleradmin {
-    FormAdmin frameAdmin;
-    IAdmin implUser;
+    formadmin frameAdmin;
+    Iadmin implUser;
     List<Admin> lb;
     
-    public controlleradmin(FormAdmin frame){
+    public controlleradmin(formadmin frame){
         this.frameAdmin = frame;
         implUser = new DAOAdmin();
         lb = implUser.getAll();
